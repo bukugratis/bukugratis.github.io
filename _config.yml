@@ -1,0 +1,5 @@
+plugins:
+- jekyll-paginate
+
+paginate: 1
+paginate_path: "/halaman/:num"

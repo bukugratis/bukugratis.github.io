@@ -18,14 +18,34 @@
 		</div>
 	</div>
 	<div class="container">
+		{% for u in site.categories %}
+			<div class="panel panel-default">
+				<div class="panel-heading">{{ u | first }}</div>
+				<div class="list-group">
+					{% for x in u.last | limit: '5' %}
+						<a href="/pdf/{{ x.pdf }}" class="list-group-item">{{ x.title }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
 		<div class="panel panel-default">
 			<div class="panel-heading">Semua Judul</div>
 			<div class="list-group">
-				{% for x in site.posts %}
+				{% for x in paginator.posts %}
 					<a href="/pdf/{{ x.pdf }}" class="list-group-item">{{ x.title }}</a>
 				{% endfor %}
 			</div>
 		</div>
+		<center>
+			<ul class="pagination">
+				{% if paginator.previous_page %}
+					<li><a href="{{ paginator.previous_page_path">&larr;</a></li>
+				{% endif %}
+				{% if paginator.next_page %}
+					<li><a href="{{ paginator.next_page_path">&rarr;</a></li>
+				{% endif %}
+			</ul>
+		</center>
 	</div>
 </body>
 </html>
