@@ -1,2 +1,5 @@
-# bukugratis.github.io
-Buku gratis dengan lisensi share alike non commercial (CC SA NC)
+Website ini adalah kumpulan PDF yang aku buat dan dibagikan secara gratis.
+
+# Lisensi
+
+CC SA NC
